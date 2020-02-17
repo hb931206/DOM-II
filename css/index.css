@@ -305,6 +305,7 @@ img {
 }
 .home .content-destination img {
   border-radius: 10px;
+  margin-bottom: 5%;
 }
 .home .content-pick {
   padding-top: 30px;
@@ -353,4 +354,7 @@ img {
 }
 .large {
   transform: scale(1.4);
+}
+.blue {
+  background-color: blue;
 }

@@ -43,3 +43,18 @@ form.addEventListener(
   },
   true
 );
+
+document.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  console.log(e.code);
+}
+
+window.addEventListener("load", event => {
+  console.log("page is fully loaded");
+});
+
+const foot = document.querySelector("footer");
+foot.addEventListener("click", () => {
+  foot.classList.toggle("blue");
+});
