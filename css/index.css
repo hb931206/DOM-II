@@ -134,14 +134,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   font-size: 4rem;
@@ -162,6 +162,7 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  transform: scale(1);
 }
 .container {
   max-width: 800px;
@@ -304,6 +305,7 @@ img {
 }
 .home .content-destination img {
   border-radius: 10px;
+  margin-bottom: 5%;
 }
 .home .content-pick {
   padding-top: 30px;
@@ -349,4 +351,11 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.large {
+  transform: scale(1.4);
+}
+.blue {
+  background-color: blue;
+  color: white;
 }
