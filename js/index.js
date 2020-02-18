@@ -7,9 +7,10 @@ imgsel.forEach(i => {
   });
 });
 
-const imgConSel = document.querySelector(".img-content");
-imgConSel.addEventListener("click", () => {
-  event.stopPropagation();
+imgsel.forEach(i => {
+  i.addEventListener("click", () => {
+    event.stopPropagation();
+  });
 });
 
 const title1 = document.querySelector("h1");
@@ -46,7 +47,6 @@ form.addEventListener(
   },
   true
 );
-
 form.addEventListener(
   "blur",
   event => {
@@ -54,6 +54,10 @@ form.addEventListener(
   },
   true
 );
+
+form.addEventListener("click", () => {
+  event.stopPropagation();
+});
 
 document.addEventListener("keydown", logKey);
 
@@ -87,4 +91,21 @@ el.addEventListener("wheel", zoom);
 const mainContent = document.querySelector(".content-section");
 mainContent.addEventListener("click", () => {
   mainContent.style.background = "red";
+});
+
+const headerContent = document.querySelectorAll("header");
+headerContent.forEach(h => {
+  h.addEventListener("click", () => {
+    h.style.background = "pink";
+  });
+});
+
+const invContent = document.querySelector(".inverse-content");
+invContent.addEventListener("click", () => {
+  invContent.style.background = "purple";
+});
+
+const desContent = document.querySelector(".content-destination");
+desContent.addEventListener("click", () => {
+  desContent.style.background = "gold";
 });
