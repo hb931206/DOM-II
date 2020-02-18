@@ -20,8 +20,8 @@ title1.addEventListener("mouseleave", () => {
 
 const nava = document.querySelectorAll("a");
 nava.forEach(h => {
-  h.addEventListener("mouseenter", () => {
-    h.style.transform = "scale(1.2)";
+  h.addEventListener("mouseover", () => {
+    h.style.transform = "scale(1.3)";
   });
 });
 
@@ -58,3 +58,19 @@ const foot = document.querySelector("footer");
 foot.addEventListener("click", () => {
   foot.classList.toggle("blue");
 });
+
+function zoom(event) {
+  event.preventDefault();
+
+  scale += event.deltaY * -0.01;
+
+  // Restrict scale
+  scale = Math.min(Math.max(0.125, scale), 4);
+
+  // Apply scale transform
+  el.style.transform = `scale(${scale})`;
+}
+
+let scale = 1;
+const el = document.querySelector("h1");
+el.addEventListener("wheel", zoom);
